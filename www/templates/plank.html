@@ -1,0 +1,29 @@
+<ion-view view-title="">
+  <ion-content class="padding">
+    <img src="">
+    Day {{data.day}}
+    {{data.time}}
+    seconds
+        Challenge
+    <div class="row">
+        <button ng-click="openModal()" class="button button-full button-balanced">
+          Start count down
+        </button>
+    </div>
+  </ion-content>
+</ion-view>
+
+<script id="modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <h1 class="title">Day {{data.day}} challenge!</h1>
+    </ion-header-bar>
+    <ion-content>
+      {{timer}}
+      {{finishText}}
+      <button ng-click="doneChallenge(data.day)" class="button button-full button-balanced" ng-show="doneFlg">
+          Done!
+      </button>
+    </ion-content>
+  </ion-modal-view>
+</script>
